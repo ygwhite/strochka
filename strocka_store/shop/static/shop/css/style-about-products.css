@@ -1,0 +1,83 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+body {
+    width: 1440px;
+    margin: 0 auto;
+
+    font-family: 'Raleway', sans-serif;
+    background-color: #E5E5E5;
+}
+
+.header-container {
+    position: relative;
+    display: flex;
+    width: 1440px;
+    padding-top: 24px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 83px;
+    background-color: #E5E5E5;
+}
+
+.header-title {
+    position: absolute;
+    width: 158.09px;
+    height: 40px;
+    left: 641px;
+    top: 24px;
+}
+
+.magazine {
+    margin-bottom: 338px;
+    position: absolute;
+    width: 80px;
+    height: 21px;
+    left: 357px;
+    top: 34px;
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+
+}
+
+.about-us {
+    position: absolute;
+    width: 56px;
+    height: 21px;
+    left: 465px;
+    top: 34px;
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+
+}

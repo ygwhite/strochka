@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strochka</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'shop/css/style.css' %}">
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-container">
+                <div class="header-img-wrapper">
+                    <img class="img-1" src="https://i.ibb.co/vDK5Gkz/Yanki-51-3.png" alt="">
+                    <img class="img-2" src="https://via.placeholder.com/480x900" alt="">
+                    <img class="img-3" src="https://via.placeholder.com/480x900" alt="">
+                </div>
+                <div id="header-text">
+                    <a class="magazine" href="{% url 'magazine' %}" style="text-decoration: none; color:#252525;">КАТАЛОГ</a>
+                    <a class="about-us" href="/" style="text-decoration: none; color:#252525;">О НАС</a>
+                    <a href="/"><img class="img-login" src="{% static 'shop/images/Vector.png' %}"></a>
+                    <a href="{% url 'home' %}" style="color:#252525;" ><h1 class="header-title">STROCHKA</h1></a>
+                    <h2 class="new-collection">Новая коллекция</h2>
+                    <a class="see-new" href="/" style="text-decoration: none;">Смотреть Новинки</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="category-container">
+                <p class="category-title">Категории</p>
+                {% for i in category %}
+                    <div class="content-category">
+                        <div class="img-categoty">
+                            <img class="category-img" src="https://via.placeholder.com/273x450" alt="">
+                        </div>
+                        <div class="category-name-title">
+                            <p class="category-name">{{ i.name }}</p>
+                        </div>
+
+                    </div>
+                {% endfor %}
+            </div>
+        </main>
+</div>
+</body>
+</html>

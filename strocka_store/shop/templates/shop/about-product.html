@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strochka</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{% static 'shop/css/style-about-products.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+</head>
+<body>`
+<header class="header-catalog">
+    <div class="header-container">
+        <div id="header-text">
+            <a class="magazine" href="{% url 'magazine' %}"
+               style="text-decoration: none; color:#252525;">КАТАЛОГ</a>
+            <a class="about-us" href="/" style="text-decoration: none; color:#252525;">О НАС</a>
+            <a href="{% url 'home' %}" style="color:#252525; text-decoration: none;"><h1 class="header-title">STROCHKA</h1></a>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <div class="img-product">
+            <img src="">
+        </div>
+        <div class="info-product">
+            <h2></h2>
+        </div>
+    </div>
+</main>

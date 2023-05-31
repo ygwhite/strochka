@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strochka</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'shop/css/style-magazine.css' %}">
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+</head>
+<body>
+<header class="header-catalog">
+    <div class="header-container">
+        <div id="header-text">
+            <a class="magazine" href="{% url 'magazine' %}"
+               style="text-decoration: none; color:#252525;">КАТАЛОГ</a>
+            <a class="about-us" href="/" style="text-decoration: none; color:#252525;">О НАС</a>
+            <a href="{% url 'home' %}" style="color:#252525; text-decoration: none;"><h1 class="header-title">STROCHKA</h1></a>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="container">
+        {% for item in content_clothes %}
+            <div class="magazine-clothes">
+                <div class="product">
+                    <a href="{{ item.get_absolute_url_product }}"><img src="{{ item.pre_photo }}" alt="" class="product-img"></a>
+                    <div class="product-content">
+                        <p>{{ item.name }}</p>
+                    </div>
+                    <footer class="product-footer">
+                        <div class="pre-description-product">
+                            <p>{{ item.pre_description }}</p>
+                        </div>
+                        <div class="product-botton">
+                            <div class="product-price">
+                                <span class="product-price-value">{{ item.price }}</span>
+                                <span class="product-price-curreency">&#8381;</span>
+                            </div>
+                            <button class="btn product-btn" type="button">Купить</button>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</main>
+</body>
