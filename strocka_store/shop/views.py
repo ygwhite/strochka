@@ -8,17 +8,18 @@ def index(request):
 
 
 def home_page(request):
-    return render(request, 'shop/index.html')
+    category = Category.objects.all()
+    return render(request, 'shop/index.html', {'category': category})
 
 
 def show_category(request, category_id):
-    content_clothes = Clothes.objects.all(category_id=category_id)
+    content_clothes = Clothes.objects.filter(category_id=category_id)
     category = Category.objects.all()
     context = {
         'content_clothes': content_clothes,
         'category': category,
     }
-    return render(request, 'shop/index.html')
+    return render(request, 'shop/magazine.html', context=context)
 
 
 def magazine(request):

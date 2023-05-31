@@ -26,7 +26,7 @@ class Category(models.Model):
         return self.name
 
     def get_absolute_url_product(self):
-        return reverse('category', kwargs={'category_id': self.pk})
+        return reverse('category_link', kwargs={'category_id': self.pk})
 
 
 class Size(models.Model):

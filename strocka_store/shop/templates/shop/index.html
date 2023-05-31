@@ -42,9 +42,8 @@
                             <img class="category-img" src="https://via.placeholder.com/273x450" alt="">
                         </div>
                         <div class="category-name-title">
-                            <p class="category-name">{{ i.name }}</p>
+                            <a href="{{ i.get_absolute_url_product }}"><p class="category-name">{{ i.name }}</p></a>
                         </div>
-
                     </div>
                 {% endfor %}
             </div>

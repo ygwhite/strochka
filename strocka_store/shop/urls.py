@@ -7,5 +7,5 @@ urlpatterns = [
     path('magazine/', magazine, name="magazine"),
     path('about-store/', about_store, name='about-store'),
     path('product/<int:product_id>/', product_info, name='product_info'),
-    path('category/<int:category_id>/', show_category, name='category'),
+    path('category/<int:category_id>/', show_category, name='category_link'),
 ]
