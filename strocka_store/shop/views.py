@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.shortcuts import render, redirect
 from .models import Clothes, Category
 
@@ -15,6 +15,10 @@ def home_page(request):
 def show_category(request, category_id):
     content_clothes = Clothes.objects.filter(category_id=category_id)
     category = Category.objects.all()
+
+    if len(content_clothes) == 0:
+        raise Http404()
+
     context = {
         'content_clothes': content_clothes,
         'category': category,
