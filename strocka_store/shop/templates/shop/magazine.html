@@ -27,9 +27,12 @@
 <main>
     <div class="container">
         {% for item in content_clothes %}
+            {% if item.is_published == True %}
             <div class="magazine-clothes">
                 <div class="product">
-                    <a href="{{ item.get_absolute_url_product }}"><img src="{{ item.pre_photo }}" alt="" class="product-img"></a>
+                    {% if item.pre_photo %}
+                        <a href="{{ item.get_absolute_url_product }}"><img src="{{ item.pre_photo.url }}" alt="" class="product-img"></a>
+                    {% endif %}
                     <div class="product-content">
                         <p>{{ item.name }}</p>
                     </div>
@@ -47,6 +50,7 @@
                     </footer>
                 </div>
             </div>
+            {% endif %}
         {% endfor %}
     </div>
 </main>
