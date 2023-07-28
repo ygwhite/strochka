@@ -71,7 +71,7 @@ body {
     font-weight: 300;
     font-size: 18px;
     line-height: 21px;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 
 }
 
@@ -87,7 +87,7 @@ body {
     font-weight: 300;
     font-size: 18px;
     line-height: 21px;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 
 
 }
@@ -96,7 +96,7 @@ body {
     margin-left: 720px;
     position: absolute;
     height: 21px;
-    left: 465px;
+    left: 220px;
     top: 34px;
 }
 
@@ -104,7 +104,7 @@ body {
     margin-left: 720px;
     position: absolute;
     height: 21px;
-    left: 510px;
+    left: 300px;
     top: 34px;
 }
 
@@ -112,7 +112,7 @@ body {
     position: absolute;
     width: 374px;
     height: 54px;
-    left: 533px;
+    left: 760px;
     top: 393px;
 
     font-family: 'Raleway';
@@ -132,7 +132,7 @@ body {
     position: absolute;
     width: 170px;
     height: 19px;
-    left: 623px;
+    left: 860px;
     top: 488px;
 
     font-family: 'Raleway';

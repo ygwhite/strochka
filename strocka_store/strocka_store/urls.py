@@ -26,6 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='home'),
     path('strochka-store/', include('shop.urls')),
+    # path('auth-user/', include('auth.urls')),
 ]
 
 if settings.DEBUG:

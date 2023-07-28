@@ -31,12 +31,12 @@
                 <a href="/"><img class="img-login" src="{% static 'shop/images/Vector.png' %}"></a>
                 <a href="/"><img class="img-cart" src="{% static 'shop/images/Frame.png' %}"></a>
                 <a href="{% url 'home' %}" style="color:#252525;"><h1 class="header-title">STROCHKA</h1></a>
-                <h2 class="new-collection">Новая коллекция</h2>
-                <a class="see-new" href="/" style="text-decoration: none;">Смотреть Новинки</a>
             </div>
         </div>
     </header>
     <main>
+        <h2 class="new-collection">Новая коллекция</h2>
+        <a class="see-new" href="/" style="text-decoration: none;">Смотреть Новинки</a>
         <div class="category-container">
             <p class="category-title">Категории</p>
             {{ get_categories }}

@@ -1,4 +1,4 @@
-from django.urls import path, include
+from django.urls import path
 
 from shop.views import magazine, about_store, home_page, product_info, show_category
 
