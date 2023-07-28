@@ -55,6 +55,7 @@ body {
     height: 40px;
     left: 641px;
     top: 5px;
+    color: #FFFFFF;
 }
 
 .magazine {
@@ -70,6 +71,7 @@ body {
     font-weight: 300;
     font-size: 18px;
     line-height: 21px;
+    color: #FFFFFF;
 
 }
 
@@ -85,6 +87,8 @@ body {
     font-weight: 300;
     font-size: 18px;
     line-height: 21px;
+    color: #FFFFFF;
+
 
 }
 
@@ -93,6 +97,14 @@ body {
     position: absolute;
     height: 21px;
     left: 465px;
+    top: 34px;
+}
+
+.img-cart {
+    margin-left: 720px;
+    position: absolute;
+    height: 21px;
+    left: 510px;
     top: 34px;
 }
 
