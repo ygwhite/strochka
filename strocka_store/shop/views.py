@@ -35,7 +35,7 @@ def about_store(request):
     return render(request, 'shop/about-store.html', {'Title': 'Strochka Store'})
 
 
-def product_info(request):
+def product_info(request, product_id):
     print(request.GET)
-    content_clothes = Clothes.objects.all()
+    content_clothes = Clothes.objects.filter(pk=product_id)
     return render(request, 'shop/about-product.html', {'content_clothes': content_clothes})

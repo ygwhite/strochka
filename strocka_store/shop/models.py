@@ -2,18 +2,16 @@ from django.core.exceptions import ValidationError
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.urls import reverse
-
-
-def validate_image_count(value):
-    if value and len(value) > 5:
-        raise ValidationError("Максимальное количество изображений - 5.")
+from django.core.exceptions import ValidationError
 
 
 class Clothes(models.Model):
     name = models.CharField(max_length=150, blank=False, verbose_name='Имя товара')
     pre_photo = models.ImageField(upload_to='images/', blank=False, null=True, verbose_name='Фото для каталога')
-    # photo = models.ImageField(upload_to="images", validators=[validate_image_count], null=True, verbose_name='Фото для страницы о товаре')
-    pre_description = models.CharField(blank=True, max_length=50, verbose_name='Небольшое описание товара')
+    photo_1 = models.ImageField(upload_to="images", null=True, verbose_name='Фото для страницы о товаре', default=None)
+    photo_2 = models.ImageField(upload_to="images", null=True, verbose_name='Фото для страницы о товаре', default=None)
+    photo_3 = models.ImageField(upload_to="images", null=True, verbose_name='Фото для страницы о товаре', default=None)
+    pre_description = models.CharField(blank=True, max_length=50, verbose_name='Небольшое описание товара', default=None)
     description = models.TextField(blank=True, null=True, verbose_name='Главное описание товара')
     quantity = models.IntegerField(default=0, blank=False, verbose_name='Количество товара')
     price = models.DecimalField(max_digits=7, decimal_places=2, blank=False, verbose_name='Цена товара')

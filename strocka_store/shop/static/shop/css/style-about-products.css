@@ -8,7 +8,6 @@ html {
 }
 
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-    margin: 0;
     padding: 0;
     font-weight: normal;
 }
@@ -27,7 +26,6 @@ img {
 body {
     width: 1440px;
     margin: 0 auto;
-
     font-family: 'Raleway', sans-serif;
     background-color: #E5E5E5;
 }
@@ -35,11 +33,6 @@ body {
 .header-container {
     position: relative;
     display: flex;
-    width: 1440px;
-    padding-top: 24px;
-    padding-left: 150px;
-    padding-right: 150px;
-    padding-bottom: 83px;
     background-color: #E5E5E5;
 }
 
@@ -48,7 +41,8 @@ body {
     width: 158.09px;
     height: 40px;
     left: 641px;
-    top: 24px;
+    top: 5px;
+    color: #FFFFFF;
 }
 
 .magazine {
@@ -64,6 +58,7 @@ body {
     font-weight: 300;
     font-size: 18px;
     line-height: 21px;
+    color: #FFFFFF !important;
 
 }
 
@@ -79,5 +74,47 @@ body {
     font-weight: 300;
     font-size: 18px;
     line-height: 21px;
+    color: #FFFFFF !important;
 
+
+}
+
+.img-login {
+    margin-left: 720px;
+    position: absolute;
+    height: 21px;
+    left: 220px;
+    top: 34px;
+}
+
+.img-cart {
+    margin-left: 720px;
+    position: absolute;
+    height: 21px;
+    left: 300px;
+    top: 34px;
+}
+
+.img-1 {
+    position: absolute;
+    width: 480px;
+    height: 900px;
+    left: 0px;
+    top: 0px;
+}
+
+.img-2 {
+    position: absolute;
+    width: 480px;
+    height: 900px;
+    left: 480px;
+    top: 0px;
+}
+
+.img-3 {
+    position: absolute;
+    width: 480px;
+    height: 900px;
+    left: 960px;
+    top: 0px;
 }

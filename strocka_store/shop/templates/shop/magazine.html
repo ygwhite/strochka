@@ -18,11 +18,13 @@
 <header class="header-catalog">
     <div class="header-container">
         <div id="header-text">
-            <a class="magazine" href="{% url 'magazine' %}"
-               style="text-decoration: none; color:#252525;">КАТАЛОГ</a>
-            <a class="about-us" href="/" style="text-decoration: none; color:#252525;">О НАС</a>
-            <a href="{% url 'home' %}" style="color:#252525; text-decoration: none;"><h1 class="header-title">STROCHKA</h1></a>
-        </div>
+                <a class="magazine" href="{% url 'magazine' %}"
+                   style="text-decoration: none; color:#252525;">КАТАЛОГ</a>
+                <a class="about-us" href="/" style="text-decoration: none; color:#252525;">О НАС</a>
+                <a href="{% url 'register' %}"><img class="img-login" src="{% static 'shop/images/Vector.png' %}"></a>
+                <a href="/"><img class="img-cart" src="{% static 'shop/images/Frame.png' %}"></a>
+                <a href="{% url 'home' %}" style="color:#252525;"><h1 class="header-title">STROCHKA</h1></a>
+            </div>
     </div>
 </header>
 <main>

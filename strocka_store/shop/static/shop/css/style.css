@@ -30,22 +30,9 @@ body {
     background-color: #E5E5E5;
 }
 
-
 .header-container {
     position: relative;
     display: flex;
-    background-color: #E5E5E5;
-}
-
-.container-main {
-    margin-top: 100px
-    position: relative;
-    height: 500px;
-    display: flex;
-    padding-top: 24px;
-    padding-left: 150px;
-    padding-right: 150px;
-    padding-bottom: 863px;
     background-color: #E5E5E5;
 }
 
@@ -169,14 +156,6 @@ body {
     width: 480px;
     height: 900px;
     left: 960px;
-    top: 0px;
-}
-
-.img-4 {
-    position: absolute;
-    width: 480px;
-    height: 900px;
-    left: 1440px;
     top: 0px;
 }
 

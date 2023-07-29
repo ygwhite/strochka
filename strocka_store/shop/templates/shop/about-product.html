@@ -1,4 +1,5 @@
 {% load static %}
+{% load shop_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,28 +10,41 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="{% static 'shop/css/style-about-products.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'shop/css/style-about-products.css' %}">
+
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 </head>
-<body>`
-<header class="header-catalog">
-    <div class="header-container">
-        <div id="header-text">
-            <a class="magazine" href="{% url 'magazine' %}"
-               style="text-decoration: none; color:#252525;">КАТАЛОГ</a>
-            <a class="about-us" href="/" style="text-decoration: none; color:#252525;">О НАС</a>
-            <a href="{% url 'home' %}" style="color:#252525; text-decoration: none;"><h1 class="header-title">STROCHKA</h1></a>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header-container">
+            <div class="header-img-wrapper">
+                {% for item in content_clothes %}
+<!--                <img class="img-1" src="{{ item.photo_1.url }}" alt="">-->
+                <img class="img-2" src="{{ item.photo_2.url }}" alt="">
+                <img class="img-3" src="{{ item.photo_3.url }}" alt="">
+                {% endfor %}
+            </div>
+            <div id="header-text">
+                <a class="magazine" href="{% url 'magazine' %}"
+                   style="text-decoration: none; color:#252525;">КАТАЛОГ</a>
+                <a class="about-us" href="/" style="text-decoration: none; color:#252525;">О НАС</a>
+                <a href="/"><img class="img-login" src="{% static 'shop/images/Vector.png' %}"></a>
+                <a href="/"><img class="img-cart" src="{% static 'shop/images/Frame.png' %}"></a>
+                <a href="{% url 'home' %}" style="color:#252525;"><h1 class="header-title">STROCHKA</h1></a>
+            </div>
         </div>
-    </div>
-</header>
-<main>
-    <div class="container">
-        <div class="img-product">
-            <img src="">
+    </header>
+    <main>
+        {% for item in content_clothes %}
+        <div class="container">
+            <div class="name-product">
+                <h2>{{ item.name }}</h2>
+            </div>
+            <div class="info-product">
+                <h2><h2>{{ item.description }}</h2></h2>
+            </div>
         </div>
-        <div class="info-product">
-            <h2></h2>
-        </div>
-    </div>
-</main>
+        {% endfor %}
+    </main>
